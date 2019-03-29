@@ -1,0 +1,180 @@
+%
+% Documento: Disposições
+%
+
+\chapter{REFERENCIAL TEÓRICO}\label{chap:referencial}
+
+Neste capítulo iremos entender os conceitos de qualidade e qualidade de \textit{software}; veremos os ciclos de desenvolvimento de um \textit{software} e a importância de escolher um ciclo adequado; e, como funciona a técnica - que norteará o desenvolvimento do \textit{software} proposto neste trabalho - de garantia e qualidade qualidade RTF - Revisão Técnica Formal.
+
+\section{Qualidade}
+
+
+Qualidade, na definição do dicionário Michaelis \footnote{https://michaelis.uol.com.br/moderno-portugues/busca/portugues-brasileiro/qualidade/}, significa "atributo, condição natural ou propriedade pela qual algo ou alguém se individualiza, distinguindo-se dos demais". Derivada do latin \textit{qualitate}, a palavra também pode expressar "precisão, o grau de perfeição ou conformidade a certo padrão". Em suma, como corrobora o Dicionário Aurélio\footnote{https://dicionariodoaurelio.com/qualidade}, "é a maneira de ser de algo ou alguém, sua superioridade ou excelência".
+
+No decorrer da história, vários autores tentaram definir o real significado de qualidade. Para \citeonline{GARVIN2002}, esse termo dispõe de várias interpretações e por isso "é essencial um melhor entendimento do termo para que a qualidade possa assumir um papel estratégico". Muitos procuraram defini-lá de acordo com seus diversos pontos de vista. Na visão generalista de Philip Crosby, qualidade é apenas atendimento aos requisitos. Ele defende a ideia de que não se deve preocupar com percepções subjetivas de qualidade, e sim focar-se no atendimento aos requisitos e especificações do produto \cite{CROSBY1979}.
+
+Para \citeonline{CAMPOS1992}, qualidade é a adequação ao uso, é a totalidade das características de um produto ou serviço que se relacionam com sua capacidade de atender às necessidades de um cliente. Qualidade é o grau no qual um conjunto de características inerentes satisfaz aos requisitos. \cite{ISO90002005}
+
+\begin{citacao}
+
+A maioria das pessoas concorda que qualidade é aquilo que produz satisfação, que está relacionada a um preço justo, a um produto que funciona corretamente e a um serviço prestado de forma a superar as expectativas de quem dela faz uso. \cite[p. 52]{VERGUEIRO2002} 
+
+\end{citacao}
+
+Na relação entre qualidade, produto e cliente final, \citeonline{DEMING1986} sustenta que qualidade de um produto é definida por meio da percepção do cliente final daquele produto, portanto, por mais que um produto possa atender a todos os requisitos técnicos e ser vendido por um preço justo, se não for valorizado pelo cliente, não tem qualidade.
+
+A defesa de \citeonline{ARAUJO2007} é que a qualidade é busca pela perfeição, almejando agradar aos clientes que estão cada vez mais exigentes. "Qualidade é adequação ao uso, é aquilo que não cria problemas, é fazer a coisa certa na primeira vez." \cite[p. 15]{RANGEL1195}
+
+Assim como existem diversos conceitos, a qualidade possui também inúmeros objetivo. Esses objetivos estendem-se ao produto: (variáveis e atributos que podem ser medidos e controlados); ao usuário: (produto é o que o cliente compra); à fabricação: (adequação às normas e às especificações); ao valor: (adequado ao uso e ao preço). \cite{MARTINSELAUGENI2006}
+
+
+
+%objetivo da qualidade
+
+%padrões e normas para garantir a qualidade
+
+\section{Qualidade de Software}
+
+\citeonline{PRESSMAN2002} define qualidade de \textit{software} como a conformidade com os requisitos; com os padrões de desenvolvimento e com as características implícitas que são esperadas em todo \textit{software} desenvolvido profissionalmente. 
+ 
+ A definição de Alexandre Bartié vai de encontro ao de Pressaman: "[...] qualidade de \textit{software} é um processo sistemático que focaliza todas as etapas e artefatos produzidos com o objetivo de garantir a conformidade de processos e produtos, prevenindo e eliminando defeitos". \cite[p. 12]{BARTIE2002}
+ 
+ 
+ Diante dessas definições, podemos sintetizar que a qualidade de \textit{software} é um conjunto de exigências e/ou condições que o \textit{software} deverá possuir para que o produto atenda às necessidades e satisfaça as partes interessadas, sejam elas: empresas, organizações ou clientes.
+ 
+ Para conseguir lucrar e vender mais, a qualidade não é apenas um diferencial de mercado, ela tem se tornado um pré-requisito na qual a empresa deve conquistar para colocar seu produto no Mercado Global. A existência da qualidade não é um fator de vantagem no mercado, mas sim uma necessidade para a garantia da competitividade. \cite{PRESSMAN2004}
+ 
+ A conquista pela qualidade não é fácil. O desenvolvimento de \textit{software} com elevada produtividade, dentro do prazo estabelecido, sem necessitar de mais recursos do que aqueles alocados, assegurando um \textit{software} de qualidade, tem sido um desafio \cite{SOMMERVILLE2003}.
+
+
+À medida que o \textit{software} passou a se tornar cada vez mais integrado à vida cotidiana, a preocupação com a qualidade cresceu. Um bom processo de desenvolvimento de \textit{software} deve capacitar a organização à construção de produtos de boa qualidade. À vista disso, existem dois tipos de qualidades a serem padronizadas, uma referente ao produto (\textit{software}) e o outro referente ao processo. \cite{PRESSMAN2011}
+
+Apenas para ter uma uma visão geral, observe o quadro
+abaixo com as principais normais nacionais e internacionais para permitir a correta avaliação de qualidade tanto de produtos de \textit{software} quanto de processos de
+desenvolvimento de \textit{software}:
+
+\input{./06-quadros/quadroNormasSoftware}
+
+O objetivo, ao desenvolver um produto de \textit{software} e quando esse produto for entregue e realmente usado pelos usuários, não é alcançar a qualidade perfeita, mas a qualidade necessária e suficiente para o uso especificado \cite{MALDONADO2001}. É essencial identificar as características de qualidade necessárias para um determinado
+produto de \textit{software} e definir em que grau essas características precisam ser alcançadas para satisfazer às necessidades dos usuários.
+
+Caracteriza-se, segundo \citeonline{MALDONADO2001}, um produto de \textit{software},  :
+
+\begin{itemize}
+    \item Funcionalidade: refere-se à existência de um conjunto de funções, que satisfazem às
+necessidades explícitas ou implícitas e suas propriedades específicas;
+
+    \item Confiabilidade: refere-se à capacidade de o \textit{software} manter seu nível de
+desempenho sob condições estabelecidas, por um período de tempo;
+    \item  Usabilidade: refere-se ao esforço necessário para usar um produto de \textit{software}, bem
+como o julgamento individual de tal uso por um conjunto explícito ou implícito de
+usuários;
+    \item  Eficiência: refere-se ao relacionamento entre o nível de desempenho do \textit{software} e a
+quantidade dos recursos utilizados sob as condições estabelecidas;
+    \item  Manutenibilidade: refere-se ao esforço necessário para fazer modificações
+específicas no \textit{software};
+    \item  Portabilidade: refere-se à capacidade do \textit{software} ser transferido de um ambiente
+para o outro;
+    \item  Efetividade: refere-se à capacidade do produto de \textit{software} possibilitar aos usuários
+atingir metas especificadas com acurácia e completeza em um contexto de uso
+especificado;
+    \item  Produtividade: refere-se à capacidade de possibilitar aos usuários utilizar uma
+quantidade adequada de recursos;
+    \item  Segurança: refere-se à capacidade de oferecer níveis aceitáveis de risco de danos a
+pessoas, negócios, \textit{software}, propriedade ou ao ambiente especificado;
+    \item Satisfação: refere-se à capacidade de satisfazer os usuários em um contexto de uso especificado.
+\end{itemize}
+
+\section{Software}
+
+Mas afinal, o que é \textit{software}? \textit{Software} é um conjunto composto por instruções de computador, estruturas de dados e documentos \cite{PRESSMAN2006}; é como um elemento de sistema lógico, e não físico que não se desgasta \cite{PRESSMAN2002}; é caracterizado como um programa de computador e toda a documentação associada a ele \cite{SOMMERVILLE2003}.
+
+\citeonline{PRESSMAN1995} ainda detalha \textit{software} como sendo: 
+
+\begin{enumerate}
+    \item Instruções que quando executadas produzem a função e o desempenho desejados;
+    \item Estruturas de dados que possibilitam que os programas manipulem adequadamente a informação;
+    \item Documentos que descrevem a operação e uso dos programas.
+\end{enumerate}
+    
+
+\begin{citacao}
+Ao passar do tempo, ninguém imaginava que o \textit{software} tornaria um elemento muito importante para o mundo e teria a capacidade de manipular a informação. Com muitos elementos computacionais tiveram mudanças até hoje e continuam tendo. Com este crescimento computacional, levam a criação de sistemas perfeitos e problemas para quem desenvolve \textit{software}s
+complexos. As preocupações dos engenheiros de \textit{software} para
+desenvolverem os \textit{software}s sem defeitos e entregarem estes produtos no tempo marcado, assim leva a aplicação da disciplina de engenharia de \textit{software}. Com o crescimento desse segmento muitas empresas possuem mais especialistas em TI em que cada um tem sua responsabilidade no desenvolvimento de \textit{software} e é diferente de antigamente que era um único
+profissional de \textit{software} que trabalhava sozinho numa sala \cite[p. 39]{PRESSMAN2007}.
+\end{citacao}
+
+Para \cite[p. 31]{PRESSMAN2011}, o \textit{software}: 1) "transforma dados pessoais (por exemplo, transações financeiras de um indivíduo) de modo que possam ser mais úteis num determinado contexto; 2) "gerencia informações comerciais para aumentar a competitividade"; 3) "fornece um portal para redes mundiais de informação (Internet) e os meios para obter informações sob todas as suas formas. "O \textit{software} distribui o produto mais importante de nossa era – a
+informação".
+
+\subsection{Tipos de Software}
+
+Software Básico - são aqueles que dão base a outros programas. Algumas características são:  a intensa interação com o hardware e compartilhamento de recursos; uso constante de processamento concorrente, que demanda o escalonamento, e estruturas de dados muito complexas. São exemplos: compiladores, editores de texto, sistemas operacionais \cite{PRESSMAN2007}.
+
+Software de Tempo Real - monitora, avalia e controla fatos do mundo real. As características desse tipo é: coleta de dados do ambiente externo; transformar a informação de acordo com a necessidade do sistema; controlar a saída para o ambiente externo e um componente de monitoração que coordena todos os outros. Exemplos: aeronaves os controles de navegação, nos automóveis os sistemas de injeção eletrônica. \cite{PRESSMAN2007}.
+
+Software Comercial - segundo \citeonline{PRESSMAN2007}, essa é a maior área privada de \textit{software}. Nessa categoria os dados são reunidos de uma forma que facilite as operações comerciais e as decisões administrativas. Temos exemplos os controle de estoque, folha de pagamento, contas a pagar e receber.
+
+Software de Computador Pessoal - são os
+responsáveis por processamento de textos, planilhas eletrônicas, computação gráfica \cite{MODESTOEOLIVEIRA2010}.
+
+Software Científico e de Engenharia - De acordo com \citeonline{MODESTOEOLIVEIRA2010}, são \textit{software} que auxiliam as aplicações científicas. Têm sido caracterizados por algoritmos de processamento de números”.
+
+Software Embutido ou Embargado - como o próprio nome sugere, são \textit{software} próprios de um determinado hardware. É usado para controlar produtos e sistemas para os mercados industriais e de consumo. Tem como característica utilizar uma memória de somente leitura e usam rotinas limitadas e particulares \cite{MODESTOEOLIVEIRA2010}.
+
+Software de Inteligência Artificial - Para \citeonline{MODESTOEOLIVEIRA2010} caracteriza-se pelo uso de algoritmos não numéricos para resolver problemas complexos. Atualmente a área de AI (\textit{Artificial Intelligency}) mais ativa é a dos sistemas especialistas, também chamados sistemas baseados em conhecimento.
+
+Software Online - são \textit{software} que trabalham em conexão com a internet. Os arquivos não são carregados localmente e sim através de um servidor, com tempo de resposta curto, mas maior que o de tempo real \cite{MODESTOEOLIVEIRA2010}.
+
+
+\subsection{Ciclo de vida do Software}
+
+O ciclo de vida do \textit{software} consiste de todas as atividades desde a criação até a sua “aposentadoria”. Esse ciclo foi pensado e criado para tornar a atividade de desenvolvimento do \textit{software} menos problemática e visa organizar o desenvolvimento utilizando técnicas e métodos \cite{SOMMERVILLE2008}.
+
+Decidir qual o modelo de ciclo de vida utilizar é uma das mais importantes e influentes decisões para o sucesso do projeto. Do contrário, escolher um modelo inadequado ou a falta de um pode fazer que haja muito retrabalho e frustração ao longo do ciclo de vida do \textit{software} \cite{MCCONNELL1996}.
+
+São descritos, a seguir,  os modelos mais utilizados \cite{SOMMERVILLE2008}, \cite{PRESSMAN2006}.
+
+\subsubsection{Modelo Em Cascata}
+\subsubsection{Modelo Incremental}
+\subsubsection{Modelos Evolucionários}
+\subsubsection{Modelo De Prototipagem}
+\subsubsection{Modelo Espiral}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%qualidade do produto e a qualidade do processo.
+%0 QUE É SOFTWARE
+%Confiabilidade de Software
+%Garantia de Qualidade
+%Processos e a Qualidade
+%Garantia da Qualidade do Software
+%Organização Internacional de Padronização (ISO)
+%Processos do Ciclo de Vida do Software
+%Automatização de Testes
+%RTF
+
+
+
+\section{MPS.BR}
+
+
+
+
+
+
+\section{Revisão técnica formal (RTF)}
